@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="mainBackground">#20B6EA</color>
+    <color name="paneBackground">#85D5EF</color>
+    <color name="slotBackground">#FAF6D6</color>
+
+    <color name="confetti1">#DAFF75</color>
+    <color name="confetti2">#ADA7FC</color>
+    <color name="confetti3">#EC6F86</color>
+    <color name="confetti4">#6AECF4</color>
+    <color name="confetti5">#AD61ED</color>
+    <color name="confetti6">#FDA6F8</color>
+
+    <color name="button1">#F15F74</color>
+    <color name="button2">#98CB4A</color>
+</resources>

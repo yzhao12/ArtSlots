@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/all"
+    android:background="@color/mainBackground"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/title"
+        android:paddingTop="10dp"
+        android:src="@drawable/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:textSize="25sp"
+        android:typeface="sans"
+        android:textColor="#000000"
+        android:textAlignment="center"
+        android:id="@+id/coins"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RelativeLayout
+        android:id="@+id/slotsPane"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@color/paneBackground"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ViewFlipper
+            android:id="@+id/flip1"
+            android:background="@color/slotBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:flipInterval="100"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:animateFirstView="true"
+            android:persistentDrawingCache="all"
+            android:measureAllChildren="false"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="92dp"
+                android:layout_height="110dp"
+                android:src="@drawable/aqua" />
+
+            <ImageView
+                android:layout_width="92dp"
+                android:layout_height="110dp"
+                android:src="@drawable/blue" />
+
+            <ImageView
+                android:layout_width="92dp"
+                android:layout_height="110dp"
+                android:src="@drawable/green" />
+
+            <ImageView
+                android:layout_width="92dp"
+                android:layout_height="110dp"
+                android:src="@drawable/peach" />
+
+            <ImageView
+                android:layout_width="92dp"
+                android:layout_height="110dp"
+                android:src="@drawable/pink" />
+
+            <ImageView
+                android:layout_width="92dp"
+                android:layout_height="110dp"
+                android:src="@drawable/red" />
+
+        </ViewFlipper>
+
+        <ViewFlipper
+            android:id="@+id/flip2"
+            android:background="@color/slotBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:flipInterval="100"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:animateFirstView="true"
+            android:persistentDrawingCache="all"
+            android:measureAllChildren="false"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="92dp"
+                android:layout_height="110dp"
+                android:src="@drawable/aqua" />
+
+            <ImageView
+                android:layout_width="92dp"
+                android:layout_height="110dp"
+                android:src="@drawable/blue" />
+
+            <ImageView
+                android:layout_width="92dp"
+                android:layout_height="110dp"
+                android:src="@drawable/green" />
+
+            <ImageView
+                android:layout_width="92dp"
+                android:layout_height="110dp"
+                android:src="@drawable/peach" />
+
+            <ImageView
+                android:layout_width="92dp"
+                android:layout_height="110dp"
+                android:src="@drawable/pink" />
+
+            <ImageView
+                android:layout_width="92dp"
+                android:layout_height="110dp"
+                android:src="@drawable/red" />
+        </ViewFlipper>
+
+        <ViewFlipper
+            android:id="@+id/flip3"
+            android:background="@color/slotBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:flipInterval="100"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:animateFirstView="true"
+            android:measureAllChildren="false"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="92dp"
+                android:layout_height="110dp"
+                android:src="@drawable/aqua" />
+
+            <ImageView
+                android:layout_width="92dp"
+                android:layout_height="110dp"
+                android:src="@drawable/blue" />
+
+            <ImageView
+                android:layout_width="92dp"
+                android:layout_height="110dp"
+                android:src="@drawable/green" />
+
+            <ImageView
+                android:layout_width="92dp"
+                android:layout_height="110dp"
+                android:src="@drawable/peach" />
+
+            <ImageView
+                android:layout_width="92dp"
+                android:layout_height="110dp"
+                android:src="@drawable/pink" />
+
+            <ImageView
+                android:layout_width="92dp"
+                android:layout_height="110dp"
+                android:src="@drawable/red" />
+        </ViewFlipper>
+    </RelativeLayout>
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/button_press"
+        android:onClick="spin"
+        android:id="@+id/go"
+        android:layout_below="@+id/slotsPane"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp" />
+
+</RelativeLayout>
