@@ -3,7 +3,6 @@ package com.yzhao12.artslots;
 import android.os.Bundle;
 import android.app.Activity;
 import android.os.Handler;
-import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
@@ -17,8 +16,6 @@ import android.widget.Toast;
 import android.widget.ViewFlipper;
 import java.util.Random;
 import android.view.WindowManager;
-
-import static android.content.ContentValues.TAG;
 
 public class MainActivity extends Activity {
 
@@ -42,9 +39,8 @@ public class MainActivity extends Activity {
         return super.onTouchEvent(event);
     }
 
-    public void spin(View v){
-        final ImageButton go = (ImageButton) findViewById(R.id.go);
-        go.setEnabled(false);
+    public void spin(){
+        spinning = true;
 
         if (numCoins < 5) {
             Toast.makeText(this, "Not Enough Coins", Toast.LENGTH_SHORT).show();
@@ -75,7 +71,7 @@ public class MainActivity extends Activity {
             @Override
             public void run() {
                 calcCoins();
-                go.setEnabled(true);
+                spinning = false;
             }
         };
 
@@ -169,24 +165,18 @@ public class MainActivity extends Activity {
 
 
     class myGestureDetector extends GestureDetector.SimpleOnGestureListener {
-        private static final String DEBUG_TAG = "Gestures";
-
         @Override
         public boolean onDown(MotionEvent event) {
-            Log.d(DEBUG_TAG,"onDown: " + event.toString());
             return true;
         }
 
         @Override
         public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
             if (e1.getY() < e2.getY() && spinning == false) {
-                Log.d(TAG, "Up to Down swipe performed");
-
-                spin(findViewById(R.id.go));
+                spin();
             }
 
             if (e1.getY() > e2.getY()) {
-                Log.d(TAG, "Down to Up swipe performed");
 
             }
 

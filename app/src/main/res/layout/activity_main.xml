@@ -177,15 +177,4 @@
                 android:src="@drawable/red" />
         </ViewFlipper>
     </RelativeLayout>
-
-    <ImageButton
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:src="@drawable/button_press"
-        android:onClick="spin"
-        android:id="@+id/go"
-        android:layout_below="@+id/slotsPane"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="23dp" />
-
 </RelativeLayout>
