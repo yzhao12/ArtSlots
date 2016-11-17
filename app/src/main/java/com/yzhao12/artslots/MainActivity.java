@@ -1,6 +1,5 @@
 package com.yzhao12.artslots;
 
-import android.media.Image;
 import android.os.Bundle;
 import android.app.Activity;
 import android.os.Handler;
@@ -27,24 +26,21 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         init();
-
         setTransitions();
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED, WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED);
 
-        if (android.os.Build.VERSION.SDK_INT >= 11) {
-            getWindow().setFlags(WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED, WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED);
-        }
-/*
         myGestureDetector m = new myGestureDetector();
-        detector = new GestureDetector(this, m);*/
+        detector = new GestureDetector(this, m);
     }
-/*
+
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         detector.onTouchEvent(event);
         return super.onTouchEvent(event);
-    }*/
+    }
 
     public void spin(View v){
         final ImageButton go = (ImageButton) findViewById(R.id.go);
@@ -165,12 +161,13 @@ public class MainActivity extends Activity {
     private ViewFlipper flip2;
     private ViewFlipper flip3;
     private ImageView values;
+    private boolean spinning = false;
 
     private Random rand = new Random();
     private Handler handler = new Handler();
     private GestureDetector detector;
 
-/*
+
     class myGestureDetector extends GestureDetector.SimpleOnGestureListener {
         private static final String DEBUG_TAG = "Gestures";
 
@@ -182,10 +179,10 @@ public class MainActivity extends Activity {
 
         @Override
         public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-            if (e1.getY() < e2.getY()) {
+            if (e1.getY() < e2.getY() && spinning == false) {
                 Log.d(TAG, "Up to Down swipe performed");
 
- //               spin(findViewById(R.id.go));
+                spin(findViewById(R.id.go));
             }
 
             if (e1.getY() > e2.getY()) {
@@ -195,5 +192,5 @@ public class MainActivity extends Activity {
 
             return true;
         }
-    }*/
+    }
 }
