@@ -1,5 +1,6 @@
 package com.yzhao12.artslots;
 
+import android.animation.ValueAnimator;
 import android.os.Bundle;
 import android.app.Activity;
 import android.os.Handler;
@@ -8,7 +9,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -40,12 +40,14 @@ public class MainActivity extends Activity {
     }
 
     public void spin(){
-        spinning = true;
-
         if (numCoins < 5) {
             Toast.makeText(this, "Not Enough Coins", Toast.LENGTH_SHORT).show();
             return;
         }
+
+        spinning = true;
+
+
 
         numCoins -= 5;
         String coins = getString(R.string.coins) + Integer.toString(numCoins);

@@ -177,4 +177,31 @@
                 android:src="@drawable/red" />
         </ViewFlipper>
     </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/fun1"
+        android:background="@color/confetti4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/slotsPane"
+        />
+
+    <ImageView
+        android:id="@+id/fun2"
+        android:background="@color/confetti2"
+        android:layout_width="270dp"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:id="@+id/fun3"
+        android:background="@color/confetti6"
+        android:layout_width="190dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+
+
 </RelativeLayout>
